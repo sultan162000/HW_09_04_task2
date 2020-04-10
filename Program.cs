@@ -9,7 +9,12 @@ namespace HW_09_04_task2
             Player aimp = new Player();
             IPlayable music = aimp;
             IRecodable dict = aimp;
-            aimp.Play();
+            
+            music.Play();
+            music.Pause();
+            music.Stop();
+            dict.Record();
+            dict.Pause();
 
         }
     }
