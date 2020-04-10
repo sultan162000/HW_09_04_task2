@@ -6,13 +6,16 @@ namespace HW_09_04_task2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Player mp = new Player();
+            mp.Play();
+            mp.stop();
+
         }
     }
     interface IPlayable{
         void Play();
-        void Pause();
-        void Stop();
+        void pause();
+        void stop();
     }
     interface IRecodable{
         void Record();
@@ -25,21 +28,23 @@ namespace HW_09_04_task2
         public void Play(){
             System.Console.WriteLine("Запуск музыки...");
         }
-        void IPlayable.Pause(){
+        
+        public void pause(){
             System.Console.WriteLine("Пауза музыки");
         }
-        void IPlayable.Stop(){
+        public void stop(){
             System.Console.WriteLine("Стоп музыки");
         }
         public void Record(){
             System.Console.WriteLine("Запись звука");
         }
-        void IRecodable.Pause(){
+        public void Pause(){
             System.Console.WriteLine("Пауза записа");
         }
-        void IRecodable.Stop(){
+        public void Stop(){
             System.Console.WriteLine("Стоп записа");
         }
+
 
     }
 }
